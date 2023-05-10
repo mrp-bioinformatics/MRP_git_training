@@ -54,11 +54,9 @@ While it is possible to work solely through the console or using a command line 
 
 ### RStudio
 
-We will be working in [RStudio](https://www.rstudio.com/products/rstudio/download/). The easiest way to get started is to go to [RStudio Cloud](https://rstudio.cloud/) and create a new project.
+We will be working in [RStudio](https://www.rstudio.com/products/rstudio/download/). The easiest way to get started is to go to [Posit Cloud](https://posit.cloud/) and create a new project.
 
-The main way of working with R is the *console*, where you enter commands and view results. RStudio surrounds this with various conveniences. In addition to the console panel, RStudio provides panels containing:
-
-Studio is divided into four "panes". The placement of these panes and their content can be customized (see menu, Tools -\> Global Options -\> Pane Layout).
+RStudio interface is conveniently organized into four divisions called "panes". 
 
 The Default Layout is:
 
@@ -70,6 +68,8 @@ The Default Layout is:
 ```{r echo=F}
 knitr::include_graphics("images/rstudio.png")
 ```
+
+The placement of these panes and their content can be customized (see menu, Tools -\> Global Options -\> Pane Layout)
 
 ### Posit Cloud (formerly RStudio Cloud)
 
@@ -153,6 +153,7 @@ getwd() # similar to UNIX PWD
 
 ## Working in the Terminal
 
-The embedded Terminal in RStudio is a command-line interface within the IDE, allowing users to execute system commands and interact with the operating system directly. 
-* It shares the same working directory as the RStudio session and supports various commands for file management, package installation, and more. 
-* Integration into the IDE streamlines workflows by eliminating the need to switch between applications, enhancing productivity and enabling seamless interaction between R programming and system administration tasks. 
+The embedded Terminal in RStudio is a command-line interface within the IDE, allowing users to execute system commands and interact with the operating system directly. \* It shares the same working directory as the RStudio session and supports various commands for file management, package installation, and more. \* Integration into the IDE streamlines workflows by eliminating the need to switch between applications, enhancing productivity and enabling seamless interaction between R programming and system administration tasks.
+```{r echo=F}
+knitr::include_graphics("https://i.imgur.com/4V0AR15.png")
+```
