@@ -54,7 +54,7 @@ While it is possible to work solely through the console or using a command line 
 
 ### RStudio
 
-We will be working in [RStudio](https://www.rstudio.com/products/rstudio/download/). The easiest way to get started is to go to [Posit Cloud](https://posit.cloud/) and create a new project.
+[RStudio](https://www.rstudio.com/products/rstudio/download/) is a user interface for working with R. It is called an Integrated Development Environment (IDE): a piece of software that provides tools to make programming easier. RStudio acts as a sort of wrapper around the R language. You can use R without RStudio, but it's much more limiting. RStudio makes it easier to import datasets, create and write scripts, and makes using R much more effective. RStudio is also free and open source. To function correctly, RStudio needs R and therefore both need to be installed on your computer. For this training we'll be using a browser based version called [Posit Cloud](#sec-posit_cloud) (see directions in the Posit Cloud section below.
 
 RStudio interface is conveniently organized into four divisions called "panes".
 
@@ -71,11 +71,16 @@ knitr::include_graphics("images/rstudio.png")
 
 The placement of these panes and their content can be customized (see menu, Tools -\> Global Options -\> Pane Layout)
 
-### Posit Cloud (formerly RStudio Cloud)
+### Posit Cloud (formerly RStudio Cloud) {#sec-posit_cloud}
 
-Posit Cloud is a browser-based version of RStudio. It will allow you to use RStudio without needing to download anything to your computer. You can also easily share your R projects with others. To use Posit Cloud a user account is required. While we recommend downloading RStudio for routine R programming use, we will be using RStudio Cloud for this training so we can easily share files and packages with you.
+Posit Cloud is a web browser-based version of RStudio. It will allow you to use RStudio without needing to download anything to your computer. You can also easily share your R projects with others. To use Posit Cloud a user account is required. While we recommend downloading RStudio for routine R programming use, we will be using Posit Cloud for this training.
 
-To access Posit Cloud proceed to <https://posit.cloud/> in a new browser window or tab.
+To access Posit Cloud
+
+1.  In a new browser window or tab create your account at <https://posit.cloud/plans/free>.
+2.  Log in with Goolge or GitHub or however you choose!
+3.  Create a new project.
+4.  Write amazing code! 
 
 ## Using this book
 

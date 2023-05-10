@@ -1,0 +1,38 @@
+# Reproducible Project Management
+
+R and RStudio allow you to tackle a wide variety of analytic and programmatic tasks not all corresponding to the same project. Knowing what really needs to be saved and establishing a procedure to keep all of the stuff together for any given project will help in preventing a data loss or information loss. 
+
+## RStudio Projects
+
+R experts keep all the files associated with a project together. This is such a wise and common practice that RStudio has built-in support for this via Rprojects. 
+
+What are they?
+
+- RStudio feature enabling users to create self-contained environments for their data analysis and coding projects. 
+- Provide a dedicated workspace where researchers and developers can organize their R scripts, data files, and related resources, simplifying project management, version control, and collaboration among team members. 
+- Encapsulate everything within a project, including configurations and dependencies
+- Because of this they promote reproducibility and streamline the development process.
+
+## Creating an RStudio Cloud project
+
+RStudio Cloud organizes everything into projects automatically.
+
+Let’s create a new project in RStudio Cloud now.
+
+First make sure you are logged in to your RStudio Cloud account (or create a [free account](https://posit.cloud/plans/free) if you haven’t yet.)
+
+Then from `Your Workspace`, select `New Project > New RStudio Project`.
+
+```{r echo=F}
+knitr::include_graphics("images/new_cloud_project.png")
+```
+
+It will take a moment for your project to launch. Then you can give it a name. Let’s call this `Reproducible Project Example`. Note that you have a `.Rproj` in your file pane.
+
+```{r echo=F}
+knitr::include_graphics("images/rproj.png")
+```
+
+Whenever you are in a project, the project is your working directory.
+
+Now that you have mastered this skill we will switch gears and talk about version control with git and GitHub and how to intergrate them with RStudio projects!

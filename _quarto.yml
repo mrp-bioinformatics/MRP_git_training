@@ -9,7 +9,7 @@ book:
   chapters:
     - index.qmd
     - RBasics.qmd
-    - intro.qmd
+    - ReproducibleProjectManagement.qmd
     - summary.qmd
     - references.qmd
 
