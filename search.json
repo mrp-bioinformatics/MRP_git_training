@@ -32,7 +32,7 @@
     "href": "RBasics.html#starting-out-in-r",
     "title": "1  Introduction to R and RStudio",
     "section": "1.3 Starting out in R",
-    "text": "1.3 Starting out in R\nR is both a programming language and an interactive environment for data exploration and statistics.\nWorking with R is primarily text-based. The basic mode of use for R is that the user provides commands in the R language and then R computes and displays the result.\n\n1.3.1 Downloading, Installing and Running R\nDownload\nR can be downloaded from CRAN (The Comprehensive R Archive Network) for Windows, Linux, or Mac.\nInstall\nInstallation of R is like most software packages and you will be guided. Should you have any issues or need help you can refer to R Installation and Administration\nRunning\nR can be launched from your software or applications launcher or When working at a command line on UNIX or Windows, the command R can be used for starting the main R program in the form R\nYou will see a console similar to this appear:\n\n\n\n\n\n\n\n\n\nWhile it is possible to work solely through the console or using a command line interface, the ideal environment to work in R is RStudio.\n\n\n1.3.2 RStudio\nWe will be working in RStudio. The easiest way to get started is to go to Posit Cloud and create a new project.\nRStudio interface is conveniently organized into four divisions called “panes”.\nThe Default Layout is:\n\nTop Left - Source: your scripts and documents\nBottom Left - Console: what R would look and be like without RStudio\nTop Right - Environment/History: look here to see what you have done\nBottom Right - Files and more: see the contents of the project/working directory here, like your Script.R file\n\n\n\n\n\n\n\n\n\n\nThe placement of these panes and their content can be customized (see menu, Tools -> Global Options -> Pane Layout)\n\n\n1.3.3 Posit Cloud (formerly RStudio Cloud)\nPosit Cloud is a browser-based version of RStudio. It will allow you to use RStudio without needing to download anything to your computer. You can also easily share your R projects with others. To use Posit Cloud a user account is required. While we recommend downloading RStudio for routine R programming use, we will be using RStudio Cloud for this training so we can easily share files and packages with you.\nTo access Posit Cloud proceed to https://posit.cloud/ in a new browser window or tab."
+    "text": "1.3 Starting out in R\nR is both a programming language and an interactive environment for data exploration and statistics.\nWorking with R is primarily text-based. The basic mode of use for R is that the user provides commands in the R language and then R computes and displays the result.\n\n1.3.1 Downloading, Installing and Running R\nDownload\nR can be downloaded from CRAN (The Comprehensive R Archive Network) for Windows, Linux, or Mac.\nInstall\nInstallation of R is like most software packages and you will be guided. Should you have any issues or need help you can refer to R Installation and Administration\nRunning\nR can be launched from your software or applications launcher or When working at a command line on UNIX or Windows, the command R can be used for starting the main R program in the form R\nYou will see a console similar to this appear:\n\n\n\n\n\n\n\n\n\nWhile it is possible to work solely through the console or using a command line interface, the ideal environment to work in R is RStudio.\n\n\n1.3.2 RStudio\nRStudio is a user interface for working with R. It is called an Integrated Development Environment (IDE): a piece of software that provides tools to make programming easier. RStudio acts as a sort of wrapper around the R language. You can use R without RStudio, but it’s much more limiting. RStudio makes it easier to import datasets, create and write scripts, and makes using R much more effective. RStudio is also free and open source. To function correctly, RStudio needs R and therefore both need to be installed on your computer. For this training we’ll be using a browser based version called Posit Cloud (see directions in the Posit Cloud section below.\nRStudio interface is conveniently organized into four divisions called “panes”.\nThe Default Layout is:\n\nTop Left - Source: your scripts and documents\nBottom Left - Console: what R would look and be like without RStudio\nTop Right - Environment/History: look here to see what you have done\nBottom Right - Files and more: see the contents of the project/working directory here, like your Script.R file\n\n\n\n\n\n\n\n\n\n\nThe placement of these panes and their content can be customized (see menu, Tools -> Global Options -> Pane Layout)\n\n\n1.3.3 Posit Cloud (formerly RStudio Cloud)\nPosit Cloud is a web browser-based version of RStudio. It will allow you to use RStudio without needing to download anything to your computer. You can also easily share your R projects with others. To use Posit Cloud a user account is required. While we recommend downloading RStudio for routine R programming use, we will be using Posit Cloud for this training.\nTo access Posit Cloud\n\nIn a new browser window or tab create your account at https://posit.cloud/plans/free.\nLog in with Goolge or GitHub or however you choose!\nCreate a new project.\nWrite amazing code!"
   },
   {
     "objectID": "RBasics.html#using-this-book",
@@ -56,24 +56,52 @@
     "text": "1.6 Working in the Terminal\nThe embedded Terminal in RStudio is a command-line interface within the IDE, allowing users to execute system commands and interact with the operating system directly.\n\nIt shares the same working directory as the RStudio session and supports various commands for file management, package installation, and more.\nIntegration into the IDE streamlines workflows by eliminating the need to switch between applications, enhancing productivity and enabling seamless interaction between R programming and system administration tasks."
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "2  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "ReproducibleProjectManagement.html#rstudio-projects",
+    "href": "ReproducibleProjectManagement.html#rstudio-projects",
+    "title": "2  Reproducible Project Management",
+    "section": "2.1 RStudio Projects",
+    "text": "2.1 RStudio Projects\nR experts keep all the files associated with a project together. This is such a wise and common practice that RStudio has built-in support for this via Rprojects.\nWhat are they?\n\nRStudio feature enabling users to create self-contained environments for their data analysis and coding projects.\nProvide a dedicated workspace where researchers and developers can organize their R scripts, data files, and related resources, simplifying project management, version control, and collaboration among team members.\nEncapsulate everything within a project, including configurations and dependencies\nBecause of this they promote reproducibility and streamline the development process."
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "3  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+    "objectID": "ReproducibleProjectManagement.html#creating-an-rstudio-cloud-project",
+    "href": "ReproducibleProjectManagement.html#creating-an-rstudio-cloud-project",
+    "title": "2  Reproducible Project Management",
+    "section": "2.2 Creating an RStudio Cloud project",
+    "text": "2.2 Creating an RStudio Cloud project\nRStudio Cloud organizes everything into projects automatically.\nLet’s create a new project in RStudio Cloud now.\nFirst make sure you are logged in to your RStudio Cloud account (or create a free account if you haven’t yet.)\nThen from Your Workspace, select New Project > New RStudio Project.\n\n\n\n\n\nIt will take a moment for your project to launch. Then you can give it a name. Let’s call this Reproducible Project Example. Note that you have a .Rproj in your file pane.\n\n\n\n\n\nWhenever you are in a project, the project is your working directory.\nNow that you have mastered this skill we will switch gears and talk about version control with git and GitHub and how to intergrate them with RStudio projects!"
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "VersionControlandRStudio.html#why-git",
+    "href": "VersionControlandRStudio.html#why-git",
+    "title": "3  Version Control and RStudio",
+    "section": "3.1 Why Git?",
+    "text": "3.1 Why Git?\nGit is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way. If you have no idea what I’m talking about, think of it as the “Track Changes” features from Microsoft Word on a raw vegan diet taking wheat grass and pomegranate shots 3 times a day.\nGit has been re-purposed by the data science community. In addition to using it for source code, we use it to manage the motley collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code."
+  },
+  {
+    "objectID": "VersionControlandRStudio.html#whats-github",
+    "href": "VersionControlandRStudio.html#whats-github",
+    "title": "3  Version Control and RStudio",
+    "section": "3.2 What’s GitHub?",
+    "text": "3.2 What’s GitHub?\nGitHub, Bitbucket, and GitLab are online services that provide a home for your Git-based projects on the internet. If you have no idea what I’m talking about, think of them as DropBox but much, much better. The remote host acts as a distribution channel or clearinghouse for your Git-managed project. It allows other people to see your stuff, sync up with you, and perhaps even make changes. These hosting providers improve upon traditional Unix Git servers with well-designed web-based interfaces.\nEven for private solo projects, it’s a good idea to push your work to a remote location for peace of mind. Why? Because it’s fairly easy to screw up your local Git repository, especially when you’re new at this. The good news is that often only the Git infrastructure is borked up. Your files are just fine! Which makes your Git pickle all the more frustrating. There are official Git solutions to these problems, but they might require expertise and patience you can’t access at 3a.m. If you’ve recently pushed your work to GitHub, it’s easy to grab a fresh copy, patch things up with the changes that only exist locally, and get on with your life. Don’t get too caught up on public versus private at this point. There are many ways to get private repositories from the major providers for low or no cost. Just get started and figure out if and how Git/GitHub is going to work for you!\nWe will not be covering all the in’s and outs of version control with Git, Github and all the resources to be found there since our time is limited. Instead you will learn how to:\n\nSet up a remote repository on Github\nChecking out a project from a version control remote repository\nConnecting RStudio to Github\nSet up a personal access token on Github\nMaking some changes, using the Rstudio Git controls and pushing those changes to Github"
+  },
+  {
+    "objectID": "VersionControlandRStudio.html#sec-setupRepo",
+    "href": "VersionControlandRStudio.html#sec-setupRepo",
+    "title": "3  Version Control and RStudio",
+    "section": "3.3 Setting up a remote repository on Github",
+    "text": "3.3 Setting up a remote repository on Github\nFirst thing we do is navigate to Github and make sure youre logged in.\nClick green “New repository” button. Or, if you are on your own profile page, click on “Repositories”, then click the green “New” button.\nHow to fill this in:\n\nRepository name: myrepo (or whatever you wish, we’ll delete this soon anyway).\nDescription: “testing my setup” (or whatever, but some text is good for the README).\nPublic.\nYES Initialize this repository with a README.\nFor everything else, just accept the default.\n\nClick big green button “Create repository.”\nCopy the HTTPS clone URL to your clipboard via the green “Clone or Download” button."
+  },
+  {
+    "objectID": "VersionControlandRStudio.html#connecting-rstudio-cloud-to-github",
+    "href": "VersionControlandRStudio.html#connecting-rstudio-cloud-to-github",
+    "title": "3  Version Control and RStudio",
+    "section": "3.4 Connecting Rstudio Cloud to Github",
+    "text": "3.4 Connecting Rstudio Cloud to Github\nHere we verify that RStudio can issue Git commands on your behalf. This means you’ll be able to pull from and push to GitHub from RStudio."
+  },
+  {
+    "objectID": "VersionControlandRStudio.html#checking-out-a-project-from-a-version-control-remote-repository",
+    "href": "VersionControlandRStudio.html#checking-out-a-project-from-a-version-control-remote-repository",
+    "title": "3  Version Control and RStudio",
+    "section": "3.5 Checking out a project from a version control remote repository",
+    "text": "3.5 Checking out a project from a version control remote repository\nHopefully it has been a joy configuring your Git setup on your computer. Now we will put all of that machinery to work and test it out. Picking up were we left off when Setting up a remote repository copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button."
   }
 ]

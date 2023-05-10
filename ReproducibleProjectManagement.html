@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="JP Courneya">
 
-<title>Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub</title>
+<title>Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub - 2&nbsp; Reproducible Project Management</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./RBasics.html" rel="next">
+<link href="./VersionControlandRStudio.html" rel="next">
+<link href="./RBasics.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reproducible Project Management</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ReproducibleProjectManagement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reproducible Project Management</span></a>
+  <a href="./ReproducibleProjectManagement.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reproducible Project Management</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -127,10 +127,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  </ul></li>
+  <li><a href="#rstudio-projects" id="toc-rstudio-projects" class="nav-link active" data-scroll-target="#rstudio-projects"><span class="toc-section-number">2.1</span>  RStudio Projects</a></li>
+  <li><a href="#creating-an-rstudio-cloud-project" id="toc-creating-an-rstudio-cloud-project" class="nav-link" data-scroll-target="#creating-an-rstudio-cloud-project"><span class="toc-section-number">2.2</span>  Creating an RStudio Cloud project</a></li>
   </ul>
 </nav>
     </div>
@@ -139,26 +137,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reproducible Project Management</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>JP Courneya </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -166,21 +152,39 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Welcome to the Malaria Research Program at The University of Maryland Baltimore - Center for Vaccine Development and Global Health <a href="https://www.medschool.umaryland.edu/malaria/" class="uri">https://www.medschool.umaryland.edu/malaria/</a>.</p>
-<p>These training materials are developed and made publicly available for increasing awareness of reproducible science and enhancing data and programming skills.</p>
-<p>mrp-bioinformatics/MRP_git_training is licensed under the Creative Commons Zero v1.0 Universal</p>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p><strong>Git and Github lessons</strong> adapt material from:</p>
+<p>R and RStudio allow you to tackle a wide variety of analytic and programmatic tasks not all corresponding to the same project. Knowing what really needs to be saved and establishing a procedure to keep all of the stuff together for any given project will help in preventing a data loss or information loss.</p>
+<section id="rstudio-projects" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="rstudio-projects"><span class="header-section-number">2.1</span> RStudio Projects</h2>
+<p>R experts keep all the files associated with a project together. This is such a wise and common practice that RStudio has built-in support for this via Rprojects.</p>
+<p>What are they?</p>
 <ul>
-<li><a href="https://happygitwithr.com/">Happy Git with R</a></li>
+<li>RStudio feature enabling users to create self-contained environments for their data analysis and coding projects.</li>
+<li>Provide a dedicated workspace where researchers and developers can organize their R scripts, data files, and related resources, simplifying project management, version control, and collaboration among team members.</li>
+<li>Encapsulate everything within a project, including configurations and dependencies</li>
+<li>Because of this they promote reproducibility and streamline the development process.</li>
 </ul>
-<p>This is a Quarto book. To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
-
-
 </section>
+<section id="creating-an-rstudio-cloud-project" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="creating-an-rstudio-cloud-project"><span class="header-section-number">2.2</span> Creating an RStudio Cloud project</h2>
+<p>RStudio Cloud organizes everything into projects automatically.</p>
+<p>Let’s create a new project in RStudio Cloud now.</p>
+<p>First make sure you are logged in to your RStudio Cloud account (or create a <a href="https://posit.cloud/plans/free">free account</a> if you haven’t yet.)</p>
+<p>Then from <code>Your Workspace</code>, select <code>New Project &gt; New RStudio Project</code>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/new_cloud_project.png" class="img-fluid" width="391"></p>
+</div>
+</div>
+<p>It will take a moment for your project to launch. Then you can give it a name. Let’s call this <code>Reproducible Project Example</code>. Note that you have a <code>.Rproj</code> in your file pane.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/rproj.png" class="img-fluid" width="437"></p>
+</div>
+</div>
+<p>Whenever you are in a project, the project is your working directory.</p>
+<p>Now that you have mastered this skill we will switch gears and talk about version control with git and GitHub and how to intergrate them with RStudio projects!</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -319,10 +323,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./RBasics.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./RBasics.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./VersionControlandRStudio.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Version Control and RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

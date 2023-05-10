@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="JP Courneya">
 
-<title>Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub</title>
+<title>Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub - 3&nbsp; Version Control and RStudio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./RBasics.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./ReproducibleProjectManagement.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Version Control and RStudio</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./VersionControlandRStudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Version Control and RStudio</span></a>
+  <a href="./VersionControlandRStudio.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Version Control and RStudio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -127,10 +127,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  </ul></li>
+  <li><a href="#why-git" id="toc-why-git" class="nav-link active" data-scroll-target="#why-git"><span class="toc-section-number">3.1</span>  Why Git?</a></li>
+  <li><a href="#whats-github" id="toc-whats-github" class="nav-link" data-scroll-target="#whats-github"><span class="toc-section-number">3.2</span>  What’s GitHub?</a></li>
+  <li><a href="#sec-setupRepo" id="toc-sec-setupRepo" class="nav-link" data-scroll-target="#sec-setupRepo"><span class="toc-section-number">3.3</span>  Setting up a remote repository on Github</a></li>
+  <li><a href="#connecting-rstudio-cloud-to-github" id="toc-connecting-rstudio-cloud-to-github" class="nav-link" data-scroll-target="#connecting-rstudio-cloud-to-github"><span class="toc-section-number">3.4</span>  Connecting Rstudio Cloud to Github</a></li>
+  <li><a href="#checking-out-a-project-from-a-version-control-remote-repository" id="toc-checking-out-a-project-from-a-version-control-remote-repository" class="nav-link" data-scroll-target="#checking-out-a-project-from-a-version-control-remote-repository"><span class="toc-section-number">3.5</span>  Checking out a project from a version control remote repository</a></li>
   </ul>
 </nav>
     </div>
@@ -139,26 +140,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Version Control and RStudio</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>JP Courneya </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -166,21 +155,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Welcome to the Malaria Research Program at The University of Maryland Baltimore - Center for Vaccine Development and Global Health <a href="https://www.medschool.umaryland.edu/malaria/" class="uri">https://www.medschool.umaryland.edu/malaria/</a>.</p>
-<p>These training materials are developed and made publicly available for increasing awareness of reproducible science and enhancing data and programming skills.</p>
-<p>mrp-bioinformatics/MRP_git_training is licensed under the Creative Commons Zero v1.0 Universal</p>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p><strong>Git and Github lessons</strong> adapt material from:</p>
-<ul>
-<li><a href="https://happygitwithr.com/">Happy Git with R</a></li>
-</ul>
-<p>This is a Quarto book. To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
-
-
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="images/github-Rstudio.jpg" class="img-fluid"></p>
+</div>
+</div>
+<section id="why-git" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="why-git"><span class="header-section-number">3.1</span> Why Git?</h2>
+<p><a href="https://git-scm.com/">Git</a> is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way. If you have no idea what I’m talking about, think of it as the “Track Changes” features from Microsoft Word on a raw vegan diet taking wheat grass and pomegranate shots 3 times a day.</p>
+<p>Git has been re-purposed by the data science community. In addition to using it for source code, we use it to manage the motley collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code.</p>
 </section>
+<section id="whats-github" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="whats-github"><span class="header-section-number">3.2</span> What’s GitHub?</h2>
+<p><a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">Bitbucket</a>, and <a href="https://about.gitlab.com/">GitLab</a> are online services that provide a home for your Git-based projects on the internet. If you have no idea what I’m talking about, think of them as DropBox but much, much better. The remote host acts as a distribution channel or clearinghouse for your Git-managed project. It allows other people to see your stuff, sync up with you, and perhaps even make changes. These hosting providers improve upon traditional Unix Git servers with well-designed web-based interfaces.</p>
+<p>Even for private solo projects, it’s a good idea to push your work to a remote location for peace of mind. Why? Because it’s fairly easy to screw up your local Git repository, especially when you’re new at this. The good news is that often only the Git infrastructure is borked up. Your files are just fine! Which makes your Git pickle all the more frustrating. There are official Git solutions to these problems, but they might require expertise and patience you can’t access at 3a.m. If you’ve recently pushed your work to GitHub, it’s easy to grab a fresh copy, patch things up with the changes that only exist locally, and get on with your life. Don’t get too caught up on public versus private at this point. There are many ways to get private repositories from the major providers for low or no cost. Just get started and figure out if and how Git/GitHub is going to work for you!</p>
+<p>We will not be covering all the in’s and outs of version control with Git, Github and all the resources to be found there since our time is limited. Instead you will learn how to:</p>
+<ul>
+<li><p>Set up a remote repository on Github</p></li>
+<li><p>Checking out a project from a version control remote repository</p></li>
+<li><p>Connecting RStudio to Github</p></li>
+<li><p>Set up a personal access token on Github</p></li>
+<li><p>Making some changes, using the Rstudio Git controls and pushing those changes to Github</p></li>
+</ul>
+</section>
+<section id="sec-setupRepo" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-setupRepo"><span class="header-section-number">3.3</span> Setting up a remote repository on Github</h2>
+<p>First thing we do is navigate to <a href="https://github.com/">Github</a> and make sure youre logged in.</p>
+<p>Click green “New repository” button. Or, if you are on your own profile page, click on “Repositories”, then click the green “New” button.</p>
+<p>How to fill this in:</p>
+<ul>
+<li>Repository name: myrepo (or whatever you wish, we’ll delete this soon anyway).</li>
+<li>Description: “testing my setup” (or whatever, but some text is good for the README).</li>
+<li>Public.</li>
+<li>YES Initialize this repository with a README.</li>
+<li>For everything else, just accept the default.</li>
+</ul>
+<p>Click big green button “Create repository.”</p>
+<p>Copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button.</p>
+</section>
+<section id="connecting-rstudio-cloud-to-github" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="connecting-rstudio-cloud-to-github"><span class="header-section-number">3.4</span> Connecting Rstudio Cloud to Github</h2>
+<p>Here we verify that RStudio can issue Git commands on your behalf. This means you’ll be able to pull from and push to GitHub from RStudio.</p>
+</section>
+<section id="checking-out-a-project-from-a-version-control-remote-repository" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="checking-out-a-project-from-a-version-control-remote-repository"><span class="header-section-number">3.5</span> Checking out a project from a version control remote repository</h2>
+<p>Hopefully it has been a joy configuring your Git setup on your computer. Now we will put all of that machinery to work and test it out. Picking up were we left off when <a href="#sec-setupRepo">Setting up a remote repository</a> copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -319,10 +340,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./ReproducibleProjectManagement.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reproducible Project Management</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./RBasics.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

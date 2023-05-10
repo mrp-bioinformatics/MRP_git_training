@@ -93,7 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./ReproducibleProjectManagement.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -168,12 +168,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./ReproducibleProjectManagement.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reproducible Project Management</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./VersionControlandRStudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Version Control and RStudio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -196,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#downloading-installing-and-running-r" id="toc-downloading-installing-and-running-r" class="nav-link" data-scroll-target="#downloading-installing-and-running-r"><span class="toc-section-number">1.3.1</span>  Downloading, Installing and Running R</a></li>
   <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio"><span class="toc-section-number">1.3.2</span>  RStudio</a></li>
-  <li><a href="#posit-cloud-formerly-rstudio-cloud" id="toc-posit-cloud-formerly-rstudio-cloud" class="nav-link" data-scroll-target="#posit-cloud-formerly-rstudio-cloud"><span class="toc-section-number">1.3.3</span>  Posit Cloud (formerly RStudio Cloud)</a></li>
+  <li><a href="#sec-posit_cloud" id="toc-sec-posit_cloud" class="nav-link" data-scroll-target="#sec-posit_cloud"><span class="toc-section-number">1.3.3</span>  Posit Cloud (formerly RStudio Cloud)</a></li>
   </ul></li>
   <li><a href="#using-this-book" id="toc-using-this-book" class="nav-link" data-scroll-target="#using-this-book"><span class="toc-section-number">1.4</span>  Using this book</a></li>
   <li><a href="#working-in-the-console" id="toc-working-in-the-console" class="nav-link" data-scroll-target="#working-in-the-console"><span class="toc-section-number">1.5</span>  Working in the Console</a></li>
@@ -270,7 +270,7 @@ R can be launched from your software or applications launcher or When working at
 </section>
 <section id="rstudio" class="level3" data-number="1.3.2">
 <h3 data-number="1.3.2" class="anchored" data-anchor-id="rstudio"><span class="header-section-number">1.3.2</span> RStudio</h3>
-<p>We will be working in <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>. The easiest way to get started is to go to <a href="https://posit.cloud/">Posit Cloud</a> and create a new project.</p>
+<p><a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> is a user interface for working with R. It is called an Integrated Development Environment (IDE): a piece of software that provides tools to make programming easier. RStudio acts as a sort of wrapper around the R language. You can use R without RStudio, but it’s much more limiting. RStudio makes it easier to import datasets, create and write scripts, and makes using R much more effective. RStudio is also free and open source. To function correctly, RStudio needs R and therefore both need to be installed on your computer. For this training we’ll be using a browser based version called <a href="#sec-posit_cloud">Posit Cloud</a> (see directions in the Posit Cloud section below.</p>
 <p>RStudio interface is conveniently organized into four divisions called “panes”.</p>
 <p>The Default Layout is:</p>
 <ul>
@@ -290,10 +290,16 @@ R can be launched from your software or applications launcher or When working at
 </div>
 <p>The placement of these panes and their content can be customized (see menu, Tools -&gt; Global Options -&gt; Pane Layout)</p>
 </section>
-<section id="posit-cloud-formerly-rstudio-cloud" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="posit-cloud-formerly-rstudio-cloud"><span class="header-section-number">1.3.3</span> Posit Cloud (formerly RStudio Cloud)</h3>
-<p>Posit Cloud is a browser-based version of RStudio. It will allow you to use RStudio without needing to download anything to your computer. You can also easily share your R projects with others. To use Posit Cloud a user account is required. While we recommend downloading RStudio for routine R programming use, we will be using RStudio Cloud for this training so we can easily share files and packages with you.</p>
-<p>To access Posit Cloud proceed to <a href="https://posit.cloud/" class="uri">https://posit.cloud/</a> in a new browser window or tab.</p>
+<section id="sec-posit_cloud" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="sec-posit_cloud"><span class="header-section-number">1.3.3</span> Posit Cloud (formerly RStudio Cloud)</h3>
+<p>Posit Cloud is a web browser-based version of RStudio. It will allow you to use RStudio without needing to download anything to your computer. You can also easily share your R projects with others. To use Posit Cloud a user account is required. While we recommend downloading RStudio for routine R programming use, we will be using Posit Cloud for this training.</p>
+<p>To access Posit Cloud</p>
+<ol type="1">
+<li>In a new browser window or tab create your account at <a href="https://posit.cloud/plans/free" class="uri">https://posit.cloud/plans/free</a>.</li>
+<li>Log in with Goolge or GitHub or however you choose!</li>
+<li>Create a new project.</li>
+<li>Write amazing code!</li>
+</ol>
 </section>
 </section>
 <section id="using-this-book" class="level2" data-number="1.4">
@@ -569,8 +575,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ReproducibleProjectManagement.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reproducible Project Management</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
