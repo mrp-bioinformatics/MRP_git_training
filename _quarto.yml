@@ -10,7 +10,7 @@ book:
     - index.qmd
     - RBasics.qmd
     - ReproducibleProjectManagement.qmd
-    - summary.qmd
+    - VersionControlandRStudio.qmd
     - references.qmd
 
 bibliography: references.bib
