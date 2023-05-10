@@ -4,7 +4,8 @@ project:
 book:
   title: "Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub"
   author: "JP Courneya"
-  date: "`r Sys.Date()`"
+  date: last-modified
+  date-format: "MMMM, YYYY"
   chapters:
     - index.qmd
     - RBasics.qmd
