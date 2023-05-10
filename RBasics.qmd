@@ -155,5 +155,5 @@ getwd() # similar to UNIX PWD
 
 The embedded Terminal in RStudio is a command-line interface within the IDE, allowing users to execute system commands and interact with the operating system directly. \* It shares the same working directory as the RStudio session and supports various commands for file management, package installation, and more. \* Integration into the IDE streamlines workflows by eliminating the need to switch between applications, enhancing productivity and enabling seamless interaction between R programming and system administration tasks.
 ```{r echo=F}
-knitr::include_graphics("https://i.imgur.com/4V0AR15.png")
+knitr::include_graphics("images/terminal_RStudio.png")
 ```
