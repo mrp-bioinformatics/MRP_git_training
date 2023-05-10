@@ -2,9 +2,51 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "MRP_git_training",
+    "title": "Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "Preface\nWelcome to the Malaria Research Program at The University of Maryland Baltimore - Center for Vaccine Development and Global Health https://www.medschool.umaryland.edu/malaria/.\nThese training materials are developed and made publicly available for increasing awareness of reproducible science and enhancing data and programming skills.\nmrp-bioinformatics/MRP_git_training is licensed under the Creative Commons Zero v1.0 Universal"
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Enhancing Research Reproducibility and Collaboration with RStudio, Git, and GitHub",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nGit and Github lessons adapt material from:\n\nHappy Git with R\n\nThis is a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "RBasics.html#learning-objectives",
+    "href": "RBasics.html#learning-objectives",
+    "title": "Introduction to R and RStudio",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nNavigate RStudio\nUse Posit Cloud (previously known as RStudio cloud)"
+  },
+  {
+    "objectID": "RBasics.html#why-learn-r",
+    "href": "RBasics.html#why-learn-r",
+    "title": "Introduction to R and RStudio",
+    "section": "Why learn R?",
+    "text": "Why learn R?\n\nR is free, open-source, and cross-platform. Anyone can inspect the source code to see how R works. Because of this transparency, there is less chance for mistakes, and if you (or someone else) find some, you can report and fix bugs. Because R is open source and is supported by a large community of developers and users, there is a very large selection of third-party add-on packages which are freely available to extend R’s native capabilities.\nR code is great for reproducibility. Reproducibility is when someone else (including your future self) can obtain the same results from the same dataset when using the same analysis. R integrates with other tools to generate manuscripts from your code. If you collect more data, or fix a mistake in your dataset, the figures and the statistical tests in your manuscript are updated automatically.\nR relies on a series of written commands, not on remembering a succession of pointing and clicking. If you want to redo your analysis because you collected more data, you don’t have to remember which button you clicked in which order to obtain your results; you just have to run your script again.\nR is interdisciplinary and extensible With 10,000+ packages that can be installed to extend its capabilities, R provides a framework that allows you to combine statistical approaches from many scientific disciplines to best suit the analytical framework you need to analyze your data. For instance, R has packages for image analysis, GIS, time series, population genetics, and a lot more.\nR works on data of all shapes and sizes. The skills you learn with R scale easily with the size of your dataset. Whether your dataset has hundreds or millions of lines, it won’t make much difference to you. R is designed for data analysis. It comes with special data structures and data types that make handling of missing data and statistical factors convenient. R can connect to spreadsheets, databases, and many other data formats, on your computer or on the web.\nR produces high-quality graphics. The plotting functionalities in R are endless, and allow you to adjust any aspect of your graph to convey most effectively the message from your data.\nR has a large and welcoming community. Thousands of people use R daily. Many of them are willing to help you through mailing lists and websites such as Stack Overflow, or on the RStudio community. Questions which are backed up with short, reproducible code snippets are more likely to attract knowledgeable responses."
+  },
+  {
+    "objectID": "RBasics.html#starting-out-in-r",
+    "href": "RBasics.html#starting-out-in-r",
+    "title": "Introduction to R and RStudio",
+    "section": "Starting out in R",
+    "text": "Starting out in R\nR is both a programming language and an interactive environment for data exploration and statistics.\nWorking with R is primarily text-based. The basic mode of use for R is that the user provides commands in the R language and then R computes and displays the result.\n\nDownloading, Installing and Running R\nDownload\nR can be downloaded from CRAN (The Comprehensive R Archive Network) for Windows, Linux, or Mac.\nInstall\nInstallation of R is like most software packages and you will be guided. Should you have any issues or need help you can refer to R Installation and Administration\nRunning\nR can be launched from your software or applications launcher or When working at a command line on UNIX or Windows, the command R can be used for starting the main R program in the form R\nYou will see a console similar to this appear:\n\n\n\n\n\n\n\n\n\nWhile it is possible to work solely through the console or using a command line interface, the ideal environment to work in R is RStudio.\n\n\nRStudio\nWe will be working in RStudio. The easiest way to get started is to go to RStudio Cloud and create a new project.\nThe main way of working with R is the console, where you enter commands and view results. RStudio surrounds this with various conveniences. In addition to the console panel, RStudio provides panels containing:\nStudio is divided into four “panes”. The placement of these panes and their content can be customized (see menu, Tools -> Global Options -> Pane Layout).\nThe Default Layout is:\n\nTop Left - Source: your scripts and documents\nBottom Left - Console: what R would look and be like without RStudio\nTop Right - Environment/History: look here to see what you have done\nBottom Right - Files and more: see the contents of the project/working directory here, like your Script.R file\n\n\n\n\n\n\n\n\n\n\n\n\nRStudio Cloud\nRStudio Cloud is a browser-based version of RStudio. It will allow you to use RStudio without needing to download anything to your computer. You can also easily share your R projects with others. While we recommend downloading RStudio for regular use, we will be using RStudio Cloud for these workshops so we can easily share files and packages with you."
+  },
+  {
+    "objectID": "RBasics.html#using-this-book",
+    "href": "RBasics.html#using-this-book",
+    "title": "Introduction to R and RStudio",
+    "section": "Using this book",
+    "text": "Using this book\nFor these instructions code will appear in the gray box as follows:\nfake code\nTo run the code you can copy and paste the code and run it in your RStudio session console at the prompt > which looks like a greater than symbol.\n> fake code\nThe code can also be added to an R Script to be run.\nWhen the code is run in RStudio the console prints out results like so:\n[1] Result\nIn this tutorial results from code will appear like so:\n## [1] Result"
+  },
+  {
+    "objectID": "RBasics.html#working-in-the-console",
+    "href": "RBasics.html#working-in-the-console",
+    "title": "Introduction to R and RStudio",
+    "section": "Working in the Console",
+    "text": "Working in the Console\nThe console is an interactive environment for RStudio, click on the “Console” pane, type 3 + 3 and press enter. R displays the result of the calculation.\n\n3 + 3\n\n[1] 6\n\n\n+ is called an operator. R has the operators you would expect for for basic mathematics:\nArithmetic operators\n\n\n\noperator\nmeaning\n\n\n\n\n+\nplus\n\n\n-\nminus\n\n\n*\ntimes\n\n\n/\ndivided by\n\n\n^\nexponent\n\n\n\nLogical Operators\n\n\n\noperator\nmeaning\n\n\n\n\n==\nexactly equal\n\n\n!=\nnot equal to\n\n\n<\nless than\n\n\n<=\nless than or equal to\n\n\n>\ngreater than\n\n\n>=\ngreater than or equal to\n\n\nx|y\nx or y\n\n\nx&y\nx and y\n\n\n!x\nnot x\n\n\n\nSpaces can be used to make code easier to read.\n\n2 * 2 == 4\n\n[1] TRUE"
   },
   {
     "objectID": "intro.html",
