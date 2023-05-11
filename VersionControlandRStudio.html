@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -129,9 +192,21 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#why-git" id="toc-why-git" class="nav-link active" data-scroll-target="#why-git"><span class="toc-section-number">3.1</span>  Why Git?</a></li>
   <li><a href="#whats-github" id="toc-whats-github" class="nav-link" data-scroll-target="#whats-github"><span class="toc-section-number">3.2</span>  What’s GitHub?</a></li>
-  <li><a href="#sec-setupRepo" id="toc-sec-setupRepo" class="nav-link" data-scroll-target="#sec-setupRepo"><span class="toc-section-number">3.3</span>  Setting up a remote repository on Github</a></li>
-  <li><a href="#connecting-rstudio-cloud-to-github" id="toc-connecting-rstudio-cloud-to-github" class="nav-link" data-scroll-target="#connecting-rstudio-cloud-to-github"><span class="toc-section-number">3.4</span>  Connecting Rstudio Cloud to Github</a></li>
+  <li><a href="#sec-setupRepo" id="toc-sec-setupRepo" class="nav-link" data-scroll-target="#sec-setupRepo"><span class="toc-section-number">3.3</span>  Setting up a remote repository on GitHub</a></li>
+  <li><a href="#connecting-rstudio-cloud-to-github" id="toc-connecting-rstudio-cloud-to-github" class="nav-link" data-scroll-target="#connecting-rstudio-cloud-to-github"><span class="toc-section-number">3.4</span>  Connecting Rstudio Cloud to GitHub</a></li>
   <li><a href="#checking-out-a-project-from-a-version-control-remote-repository" id="toc-checking-out-a-project-from-a-version-control-remote-repository" class="nav-link" data-scroll-target="#checking-out-a-project-from-a-version-control-remote-repository"><span class="toc-section-number">3.5</span>  Checking out a project from a version control remote repository</a></li>
+  <li><a href="#clone-the-new-github-repository-to-your-computer-via-rstudio" id="toc-clone-the-new-github-repository-to-your-computer-via-rstudio" class="nav-link" data-scroll-target="#clone-the-new-github-repository-to-your-computer-via-rstudio"><span class="toc-section-number">3.6</span>  Clone the new GitHub repository to your computer via RStudio</a></li>
+  <li><a href="#introduce-yourself-to-git" id="toc-introduce-yourself-to-git" class="nav-link" data-scroll-target="#introduce-yourself-to-git"><span class="toc-section-number">3.7</span>  Introduce yourself to Git</a></li>
+  <li><a href="#get-a-personal-access-token-pat" id="toc-get-a-personal-access-token-pat" class="nav-link" data-scroll-target="#get-a-personal-access-token-pat"><span class="toc-section-number">3.8</span>  Get a personal access token (PAT)</a>
+  <ul class="collapse">
+  <li><a href="#create-the-pat" id="toc-create-the-pat" class="nav-link" data-scroll-target="#create-the-pat"><span class="toc-section-number">3.8.1</span>  Create the PAT</a></li>
+  <li><a href="#put-your-pat-into-the-git-credential-store" id="toc-put-your-pat-into-the-git-credential-store" class="nav-link" data-scroll-target="#put-your-pat-into-the-git-credential-store"><span class="toc-section-number">3.8.2</span>  Put your PAT into the Git credential store</a></li>
+  </ul></li>
+  <li><a href="#making-some-changes-save-commit." id="toc-making-some-changes-save-commit." class="nav-link" data-scroll-target="#making-some-changes-save-commit."><span class="toc-section-number">3.9</span>  Making some changes, save, commit.</a></li>
+  <li><a href="#push-your-local-changes-online-to-github" id="toc-push-your-local-changes-online-to-github" class="nav-link" data-scroll-target="#push-your-local-changes-online-to-github"><span class="toc-section-number">3.10</span>  Push your local changes online to GitHub</a></li>
+  <li><a href="#confirm-the-local-change-propagated-to-the-github-remote" id="toc-confirm-the-local-change-propagated-to-the-github-remote" class="nav-link" data-scroll-target="#confirm-the-local-change-propagated-to-the-github-remote"><span class="toc-section-number">3.11</span>  Confirm the local change propagated to the GitHub remote</a></li>
+  <li><a href="#clean-up" id="toc-clean-up" class="nav-link" data-scroll-target="#clean-up"><span class="toc-section-number">3.12</span>  Clean up</a></li>
+  <li><a href="#clone-a-template-repository-from-mrp-bioinformatics" id="toc-clone-a-template-repository-from-mrp-bioinformatics" class="nav-link" data-scroll-target="#clone-a-template-repository-from-mrp-bioinformatics"><span class="toc-section-number">3.13</span>  Clone a template repository from MRP-Bioinformatics</a></li>
   </ul>
 </nav>
     </div>
@@ -169,18 +244,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="3.2" class="anchored" data-anchor-id="whats-github"><span class="header-section-number">3.2</span> What’s GitHub?</h2>
 <p><a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">Bitbucket</a>, and <a href="https://about.gitlab.com/">GitLab</a> are online services that provide a home for your Git-based projects on the internet. If you have no idea what I’m talking about, think of them as DropBox but much, much better. The remote host acts as a distribution channel or clearinghouse for your Git-managed project. It allows other people to see your stuff, sync up with you, and perhaps even make changes. These hosting providers improve upon traditional Unix Git servers with well-designed web-based interfaces.</p>
 <p>Even for private solo projects, it’s a good idea to push your work to a remote location for peace of mind. Why? Because it’s fairly easy to screw up your local Git repository, especially when you’re new at this. The good news is that often only the Git infrastructure is borked up. Your files are just fine! Which makes your Git pickle all the more frustrating. There are official Git solutions to these problems, but they might require expertise and patience you can’t access at 3a.m. If you’ve recently pushed your work to GitHub, it’s easy to grab a fresh copy, patch things up with the changes that only exist locally, and get on with your life. Don’t get too caught up on public versus private at this point. There are many ways to get private repositories from the major providers for low or no cost. Just get started and figure out if and how Git/GitHub is going to work for you!</p>
-<p>We will not be covering all the in’s and outs of version control with Git, Github and all the resources to be found there since our time is limited. Instead you will learn how to:</p>
+<p>We will not be covering all the in’s and outs of version control with Git, GitHub and all the resources to be found there since our time is limited. Instead you will learn how to:</p>
 <ul>
-<li><p>Set up a remote repository on Github</p></li>
+<li><p>Set up a remote repository on GitHub</p></li>
 <li><p>Checking out a project from a version control remote repository</p></li>
-<li><p>Connecting RStudio to Github</p></li>
-<li><p>Set up a personal access token on Github</p></li>
-<li><p>Making some changes, using the Rstudio Git controls and pushing those changes to Github</p></li>
+<li><p>Connecting RStudio to GitHub</p></li>
+<li><p>Set up a personal access token on GitHub</p></li>
+<li><p>Making some changes, using the Rstudio Git controls and pushing those changes to GitHub</p></li>
 </ul>
 </section>
 <section id="sec-setupRepo" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-setupRepo"><span class="header-section-number">3.3</span> Setting up a remote repository on Github</h2>
-<p>First thing we do is navigate to <a href="https://github.com/">Github</a> and make sure youre logged in.</p>
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-setupRepo"><span class="header-section-number">3.3</span> Setting up a remote repository on GitHub</h2>
+<p>First thing we do is navigate to <a href="https://github.com/">GitHub</a>, make sure you’re logged in.</p>
 <p>Click green “New repository” button. Or, if you are on your own profile page, click on “Repositories”, then click the green “New” button.</p>
 <p>How to fill this in:</p>
 <ul>
@@ -194,12 +269,128 @@ ul.task-list li input[type="checkbox"] {
 <p>Copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button.</p>
 </section>
 <section id="connecting-rstudio-cloud-to-github" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="connecting-rstudio-cloud-to-github"><span class="header-section-number">3.4</span> Connecting Rstudio Cloud to Github</h2>
+<h2 data-number="3.4" class="anchored" data-anchor-id="connecting-rstudio-cloud-to-github"><span class="header-section-number">3.4</span> Connecting Rstudio Cloud to GitHub</h2>
 <p>Here we verify that RStudio can issue Git commands on your behalf. This means you’ll be able to pull from and push to GitHub from RStudio.</p>
 </section>
 <section id="checking-out-a-project-from-a-version-control-remote-repository" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="checking-out-a-project-from-a-version-control-remote-repository"><span class="header-section-number">3.5</span> Checking out a project from a version control remote repository</h2>
-<p>Hopefully it has been a joy configuring your Git setup on your computer. Now we will put all of that machinery to work and test it out. Picking up were we left off when <a href="#sec-setupRepo">Setting up a remote repository</a> copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button.</p>
+<p>Picking up were we left off when <a href="#sec-setupRepo">Setting up a remote repository</a> copy the HTTPS clone URL to your clipboard via the green “Clone or Download” button.</p>
+</section>
+<section id="clone-the-new-github-repository-to-your-computer-via-rstudio" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="clone-the-new-github-repository-to-your-computer-via-rstudio"><span class="header-section-number">3.6</span> Clone the new GitHub repository to your computer via RStudio</h2>
+<p>In RStudio Cloud, start a new Project:</p>
+<ul>
+<li><p>RStudioCloud &gt; New Project &gt; New Project from Git Repository. In “Repository URL”, paste the URL of your new GitHub repository. It will be something like this: <code>https://github.com/j-p-courneya/MRP_GitHub_Practice.git.</code></p></li>
+<li><p>Accept the default project directory name, e.g.&nbsp;MRP_GitHub_Practice, which coincides with the GitHub repo name.</p></li>
+<li><p>Take charge of – or at least notice! – where the Project will be saved locally. A common rookie mistake is to have no idea where you are saving files or what your working directory is. Pay attention. Be intentional. (if working in local RStudio, not Posit Cloud)</p></li>
+<li><p>I suggest you check “Open in new session”, as that’s what you’ll usually do in real life (if working in local RStudio, not Posit Cloud).</p></li>
+<li><p>Click “Create Project”.</p></li>
+</ul>
+<p>You should find yourself in a new local RStudio Project that represents the new test repo we just created on GitHub. This should download the README.md file from GitHub. Look in RStudio’s file browser pane for the README.md file.</p>
+</section>
+<section id="introduce-yourself-to-git" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="introduce-yourself-to-git"><span class="header-section-number">3.7</span> Introduce yourself to Git</h2>
+<p>Now we will configure git to talk with GitHub from RStudio.</p>
+<p>The <a href="https://usethis.r-lib.org/">usethis</a> package offers an approach to set your Git user name and email from within R as well as setting up a personal access token. Why does this matter? Because we want to be able to push changes to our remote repository (save what we work on locally, on GitHub).</p>
+<p>To configure git:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## install if needed (do this exactly once):</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Jane Doe"</span>, <span class="at">user.email =</span> <span class="st">"jane@example.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Check what you just did <code>usethis::git_sitrep()</code> generates a git situation-report. It can help you confirm things will work as expected; it can also help you diagnose problems:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">use_git_config</span>(<span class="at">core.editor =</span> <span class="st">"nano"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="get-a-personal-access-token-pat" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="get-a-personal-access-token-pat"><span class="header-section-number">3.8</span> Get a personal access token (PAT)</h2>
+<section id="create-the-pat" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="create-the-pat"><span class="header-section-number">3.8.1</span> Create the PAT</h3>
+<p>In this step you will be creating a PAT. Since GitHub is moving away from username + password to push to their server it will be inevitable that you must set this up to work with GitHub from your local computer and RStudio. To create the token using <code>usethis</code> run:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will see running this command takes you to a pre-filled form to create a new PAT. You can get to the same page in the browser by clicking on “Generate new token” from <a href="https://github.com/settings/tokens" class="uri">https://github.com/settings/tokens</a>. The advantage of <code>create_github_token()</code> is that the <code>usethis</code> maintainers have pre-selected some recommended scopes, which you can look over and adjust before clicking “Generate token”. It is a very good idea to give the token a descriptive name, because one day you might have multiple PATs, e.g., one that’s configured on your main work computer and another that you use from a secondary computer or VM. Eventually, you’ll need to “spring clean” your PATs and this is much less nerve-wracking if you know which PAT is being used where and for what.</p>
+<p>You must <strong>store this token somewhere</strong>, because you’ll never be able to see it again, once you leave this browser window. If you somehow goof this up, just generate a new PAT and, so you don’t confuse yourself, delete the lost token. In the moment, we usually copy the PAT to the clipboard, anticipating what we’ll do next: trigger a prompt that lets us store the PAT in the Git credential store.</p>
+</section>
+<section id="put-your-pat-into-the-git-credential-store" class="level3" data-number="3.8.2">
+<h3 data-number="3.8.2" class="anchored" data-anchor-id="put-your-pat-into-the-git-credential-store"><span class="header-section-number">3.8.2</span> Put your PAT into the Git credential store</h3>
+<p>Next you need to run:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will have the <code>gitcreds</code> package installed, as of <code>usethis v2.0.0</code>, because usethis uses gh, and gh uses gitcreds.</p>
+<p>If you don’t have a PAT stored already, it will prompt you to enter your PAT. <strong>Paste!</strong></p>
+<p>If you do already have a stored credential, <code>gitcreds::gitcreds_set()</code> reveals this and will even let you inspect it. This helps you decide whether to keep the existing credential or replace it. When in doubt, embrace a new, known-to-be-good credential over an old one, of uncertain origins.</p>
+<p>Here are two great ways to check that all is well:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gh<span class="sc">::</span><span class="fu">gh_whoami</span>()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Both of these functions reveal whether a GitHub PAT is discovered and provide information about the associated user, the PAT’s scopes, etc.</p>
+<p>This step is something you do once. Or, rather, once per machine, per PAT. From this point on, <code>usethis</code> and its dependencies should be able to automatically retrieve and use this PAT.</p>
+</section>
+</section>
+<section id="making-some-changes-save-commit." class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="making-some-changes-save-commit."><span class="header-section-number">3.9</span> Making some changes, save, commit.</h2>
+<p>From RStudio, modify the <code>README.md</code> file, e.g., by adding the line “This is a line from RStudio”. Save your changes.</p>
+<p>Commit these changes to your local repo. How?</p>
+<p>From RStudio:</p>
+<ul>
+<li><p>Click the “Git” tab in upper right pane.</p></li>
+<li><p>Check “Staged” box for README.md.</p></li>
+<li><p>If you’re not already in the Git pop-up, click “Commit”.</p></li>
+<li><p>Type a message in “Commit message”, such as “Commit from RStudio”.</p></li>
+<li><p>Click “Commit”.</p></li>
+</ul>
+</section>
+<section id="push-your-local-changes-online-to-github" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="push-your-local-changes-online-to-github"><span class="header-section-number">3.10</span> Push your local changes online to GitHub</h2>
+<p>Click the green “Push” button to send your local changes to GitHub. You should see some message along these lines.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>[master dc671f0] blah</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span> files changed, <span class="dv">22</span> <span class="fu">insertions</span>(<span class="sc">+</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> create mode <span class="dv">100644</span> .gitignore</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a> create mode <span class="dv">100644</span> myrepo.Rproj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="confirm-the-local-change-propagated-to-the-github-remote" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="confirm-the-local-change-propagated-to-the-github-remote"><span class="header-section-number">3.11</span> Confirm the local change propagated to the GitHub remote</h2>
+<p>Go back to the browser. I assume we’re still viewing your new GitHub repo.</p>
+<p>Refresh.</p>
+<p>You should see the new “This is a line from RStudio” in the README.</p>
+<p>If you click on “commits”, you should see one with the message “Commit from RStudio”.</p>
+<p>If you have made it this far, you are DONE with set up.</p>
+</section>
+<section id="clean-up" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="clean-up"><span class="header-section-number">3.12</span> Clean up</h2>
+<p>At this point since this was all practice you might be interested in deleting the practice repo. It is also good to learn how to do this for real-life scenarios.</p>
+<p><strong>Local</strong> When you’re ready to clean up, you can delete the local repo any way you like. It’s just a regular directory on your computer.</p>
+<p><strong>GitHub</strong> In the browser, go to your repo’s landing page on GitHub. Click on “Settings”.</p>
+<p>Scroll down, click on “delete repository,” and do as it asks. GitHub really wants to make sure you definitely want to get rid of the repository.</p>
+</section>
+<section id="clone-a-template-repository-from-mrp-bioinformatics" class="level2" data-number="3.13">
+<h2 data-number="3.13" class="anchored" data-anchor-id="clone-a-template-repository-from-mrp-bioinformatics"><span class="header-section-number">3.13</span> Clone a template repository from MRP-Bioinformatics</h2>
+<p>The bioinformatics core has set up a organization account on GitHub. A GitHub organization is a shared workspace on the GitHub platform where individuals and teams collaborate on projects, manage repositories, and coordinate their development efforts.</p>
+<p>GitHub organizations have repositories just like personal accounts do. Also for routine structured repositories, like for when youre going to work on a code project, a user can create a “template” repository which can be cloned to a persons user account or to another organization. Lets practice doing that</p>
+<ul>
+<li>Navigate to MRP-Bioinformatics organization page <a href="https://github.com/mrp-bioinformatics" class="uri">https://github.com/mrp-bioinformatics</a></li>
+<li>Under repositories look for “new_project_template” and select it</li>
+<li>Feel free to examine its contents clicking around in the files and directories.</li>
+<li>Next we will click “Use this template” and choose “Create a new repository” to clone it to our personal GitHub accounts.</li>
+<li>Fill out the form naming the new repository. This is a great point to start from for version controlled projects because you are inheriting an ideal directory structure and creating a repository at the same time instead of starting frorm scratch.</li>
+<li>Select whether you want a Public or Private repository</li>
+<li>Leave “Include all branches” unchecked</li>
+<li>Mash the green button “Create repository from template”</li>
+<li>Bask in glory of your amazing GitHub skills!</li>
+</ul>
+<p>This brings us to the conclusion of this training. Stay tuned for more learning opportunities and dont forget to like and subscribe (JK!)</p>
 
 
 </section>
