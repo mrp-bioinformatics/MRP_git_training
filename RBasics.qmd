@@ -29,7 +29,7 @@ The following chapter will provide you with a hands on opportunity to familiariz
 
 ## Starting out in R
 
-[R](https://cran.rstudio.com/) is both a programming language and an interactive environment for data exploration and statistics.
+[R](https://cran.rstudio.com/) is both a programming language and an interactive environment for data exploration and statistics.[@R-base]
 
 Working with R is primarily text-based. The basic mode of use for R is that the user provides commands in the R language and then R computes and displays the result.
 

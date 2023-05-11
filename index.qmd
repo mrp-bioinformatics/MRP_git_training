@@ -12,4 +12,4 @@ mrp-bioinformatics/MRP_git_training is licensed under the Creative Commons Zero 
 
 -   [Happy Git with R](https://happygitwithr.com/)
 
-This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>.
+This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>. [@quarto]

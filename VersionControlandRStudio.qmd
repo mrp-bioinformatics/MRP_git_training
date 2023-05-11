@@ -4,6 +4,17 @@
 knitr::include_graphics("images/github-Rstudio.jpg")
 ```
 
+## Learning Objectives
+
+- What is version control
+- What is GitHub
+- How to set up a remote repository on GitHub
+- Connecting Rstudio to GitHub
+- Create a personal access token for pushing changes to GitHub
+- What is a commit
+- Push changes to a remote repository
+- How to delete a repository
+- Use a template to create a repository on GitHub
 ## Why Git?
 
 [Git](https://git-scm.com/) is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files -- called a repository -- in a sane, highly structured way. If you have no idea what I'm talking about, think of it as the "Track Changes" features from Microsoft Word on a raw vegan diet taking wheat grass and pomegranate shots 3 times a day.
@@ -74,7 +85,7 @@ You should find yourself in a new local RStudio Project that represents the new 
 
 Now we will configure git to talk with GitHub from RStudio.
 
-The [usethis](https://usethis.r-lib.org/) [@usethis2022] package offers an approach to set your Git user name and email from within R as well as setting up a personal access token. Why does this matter? Because we want to be able to push changes to our remote repository (save what we work on locally, on GitHub).
+The [usethis](https://usethis.r-lib.org/) package [@usethis2022] offers an approach to set your Git user name and email from within R as well as setting up a personal access token. Why does this matter? Because we want to be able to push changes to our remote repository (save what we work on locally, on GitHub).
 
 To configure git:
 
