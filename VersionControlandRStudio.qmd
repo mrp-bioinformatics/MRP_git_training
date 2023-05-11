@@ -74,7 +74,7 @@ You should find yourself in a new local RStudio Project that represents the new 
 
 Now we will configure git to talk with GitHub from RStudio.
 
-The [usethis](https://usethis.r-lib.org/) package offers an approach to set your Git user name and email from within R as well as setting up a personal access token. Why does this matter? Because we want to be able to push changes to our remote repository (save what we work on locally, on GitHub).
+The [usethis](https://usethis.r-lib.org/) [@usethis2022] package offers an approach to set your Git user name and email from within R as well as setting up a personal access token. Why does this matter? Because we want to be able to push changes to our remote repository (save what we work on locally, on GitHub).
 
 To configure git:
 
@@ -118,7 +118,7 @@ gitcreds::gitcreds_set()
 
 You will have the `gitcreds` package installed, as of `usethis v2.0.0`, because usethis uses gh, and gh uses gitcreds.
 
-If you don’t have a PAT stored already, it will prompt you to enter your PAT. **Paste!**
+If you don't have a PAT stored already, it will prompt you to enter your PAT. **Paste!**
 
 If you do already have a stored credential, `gitcreds::gitcreds_set()` reveals this and will even let you inspect it. This helps you decide whether to keep the existing credential or replace it. When in doubt, embrace a new, known-to-be-good credential over an old one, of uncertain origins.
 
@@ -130,31 +130,31 @@ gh::gh_whoami()
 usethis::git_sitrep()
 ```
 
-Both of these functions reveal whether a GitHub PAT is discovered and provide information about the associated user, the PAT’s scopes, etc.
+Both of these functions reveal whether a GitHub PAT is discovered and provide information about the associated user, the PAT's scopes, etc.
 
 This step is something you do once. Or, rather, once per machine, per PAT. From this point on, `usethis` and its dependencies should be able to automatically retrieve and use this PAT.
 
 ## Making some changes, save, commit.
 
-From RStudio, modify the `README.md` file, e.g., by adding the line “This is a line from RStudio”. Save your changes.
+From RStudio, modify the `README.md` file, e.g., by adding the line "This is a line from RStudio". Save your changes.
 
 Commit these changes to your local repo. How?
 
 From RStudio:
 
-- Click the “Git” tab in upper right pane.
+-   Click the "Git" tab in upper right pane.
 
-- Check “Staged” box for README.md.
+-   Check "Staged" box for README.md.
 
-- If you’re not already in the Git pop-up, click “Commit”.
+-   If you're not already in the Git pop-up, click "Commit".
 
-- Type a message in “Commit message”, such as “Commit from RStudio”.
+-   Type a message in "Commit message", such as "Commit from RStudio".
 
-- Click “Commit”.
+-   Click "Commit".
 
 ## Push your local changes online to GitHub
 
-Click the green “Push” button to send your local changes to GitHub. You should see some message along these lines.
+Click the green "Push" button to send your local changes to GitHub. You should see some message along these lines.
 
 ```{r eval=FALSE}
 [master dc671f0] blah
@@ -165,13 +165,13 @@ Click the green “Push” button to send your local changes to GitHub. You shou
 
 ## Confirm the local change propagated to the GitHub remote
 
-Go back to the browser. I assume we’re still viewing your new GitHub repo.
+Go back to the browser. I assume we're still viewing your new GitHub repo.
 
 Refresh.
 
-You should see the new “This is a line from RStudio” in the README.
+You should see the new "This is a line from RStudio" in the README.
 
-If you click on “commits”, you should see one with the message “Commit from RStudio”.
+If you click on "commits", you should see one with the message "Commit from RStudio".
 
 If you have made it this far, you are DONE with set up.
 
@@ -179,26 +179,26 @@ If you have made it this far, you are DONE with set up.
 
 At this point since this was all practice you might be interested in deleting the practice repo. It is also good to learn how to do this for real-life scenarios.
 
-**Local** When you’re ready to clean up, you can delete the local repo any way you like. It’s just a regular directory on your computer.
+**Local** When you're ready to clean up, you can delete the local repo any way you like. It's just a regular directory on your computer.
 
-**GitHub** In the browser, go to your repo’s landing page on GitHub. Click on “Settings”.
+**GitHub** In the browser, go to your repo's landing page on GitHub. Click on "Settings".
 
-Scroll down, click on “delete repository,” and do as it asks. GitHub really wants to make sure you definitely want to get rid of the repository.
+Scroll down, click on "delete repository," and do as it asks. GitHub really wants to make sure you definitely want to get rid of the repository.
 
-## Clone a template repository from MRP-Bioinformatics 
+## Clone a template repository from MRP-Bioinformatics
 
 The bioinformatics core has set up a organization account on GitHub. A GitHub organization is a shared workspace on the GitHub platform where individuals and teams collaborate on projects, manage repositories, and coordinate their development efforts.
 
 GitHub organizations have repositories just like personal accounts do. Also for routine structured repositories, like for when youre going to work on a code project, a user can create a "template" repository which can be cloned to a persons user account or to another organization. Lets practice doing that
 
-- Navigate to MRP-Bioinformatics organization page <https://github.com/mrp-bioinformatics>
-- Under repositories look for "new_project_template" and select it
-- Feel free to examine its contents clicking around in the files and directories.
-- Next we will click "Use this template" and choose "Create a new repository" to clone it to our personal GitHub accounts.
-- Fill out the form naming the new repository. This is a great point to start from for version controlled projects because you are inheriting an ideal directory structure and creating a repository at the same time instead of starting frorm scratch. 
-- Select whether you want a Public or Private repository 
-- Leave "Include all branches" unchecked
-- Mash the green button "Create repository from template"
-- Bask in glory of your amazing GitHub skills!
+-   Navigate to MRP-Bioinformatics organization page <https://github.com/mrp-bioinformatics>
+-   Under repositories look for "new_project_template" and select it
+-   Feel free to examine its contents clicking around in the files and directories.
+-   Next we will click "Use this template" and choose "Create a new repository" to clone it to our personal GitHub accounts.
+-   Fill out the form naming the new repository. This is a great point to start from for version controlled projects because you are inheriting an ideal directory structure and creating a repository at the same time instead of starting frorm scratch.
+-   Select whether you want a Public or Private repository
+-   Leave "Include all branches" unchecked
+-   Mash the green button "Create repository from template"
+-   Bask in glory of your amazing GitHub skills!
 
 This brings us to the conclusion of this training. Stay tuned for more learning opportunities and dont forget to like and subscribe (JK!)

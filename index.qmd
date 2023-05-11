@@ -1,8 +1,8 @@
 # Preface {.unnumbered}
 
-Welcome to the Malaria Research Program at The University of Maryland Baltimore - Center for Vaccine Development and Global Health <https://www.medschool.umaryland.edu/malaria/>. 
+Welcome to the Malaria Research Program at The University of Maryland Baltimore - Center for Vaccine Development and Global Health <https://www.medschool.umaryland.edu/malaria/>.
 
-These training materials are developed and made publicly available for increasing awareness of reproducible science and enhancing data and programming skills. 
+These training materials are developed and made publicly available for increasing awareness of reproducible science and enhancing data and programming skills.
 
 mrp-bioinformatics/MRP_git_training is licensed under the Creative Commons Zero v1.0 Universal
 
@@ -10,6 +10,6 @@ mrp-bioinformatics/MRP_git_training is licensed under the Creative Commons Zero 
 
 **Git and Github lessons** adapt material from:
 
-- [Happy Git with R](https://happygitwithr.com/)
+-   [Happy Git with R](https://happygitwithr.com/)
 
 This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>.
