@@ -209,7 +209,7 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#why-git" id="toc-why-git" class="nav-link active" data-scroll-target="#why-git"><span class="toc-section-number">3.1</span>  Why Git?</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="toc-section-number">3.1</span>  Learning Objectives</a></li>
   <li><a href="#whats-github" id="toc-whats-github" class="nav-link" data-scroll-target="#whats-github"><span class="toc-section-number">3.2</span>  What’s GitHub?</a></li>
   <li><a href="#sec-setupRepo" id="toc-sec-setupRepo" class="nav-link" data-scroll-target="#sec-setupRepo"><span class="toc-section-number">3.3</span>  Setting up a remote repository on GitHub</a></li>
   <li><a href="#connecting-rstudio-cloud-to-github" id="toc-connecting-rstudio-cloud-to-github" class="nav-link" data-scroll-target="#connecting-rstudio-cloud-to-github"><span class="toc-section-number">3.4</span>  Connecting Rstudio Cloud to GitHub</a></li>
@@ -254,8 +254,19 @@ div.csl-indent {
 <p><img src="images/github-Rstudio.jpg" class="img-fluid"></p>
 </div>
 </div>
-<section id="why-git" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="why-git"><span class="header-section-number">3.1</span> Why Git?</h2>
+<section id="learning-objectives" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">3.1</span> Learning Objectives</h2>
+<ul>
+<li>What is version control</li>
+<li>What is GitHub</li>
+<li>How to set up a remote repository on GitHub</li>
+<li>Connecting Rstudio to GitHub</li>
+<li>Create a personal access token for pushing changes to GitHub</li>
+<li>What is a commit</li>
+<li>Push changes to a remote repository</li>
+<li>How to delete a repository</li>
+<li>Use a template to create a repository on GitHub ## Why Git?</li>
+</ul>
 <p><a href="https://git-scm.com/">Git</a> is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way. If you have no idea what I’m talking about, think of it as the “Track Changes” features from Microsoft Word on a raw vegan diet taking wheat grass and pomegranate shots 3 times a day.</p>
 <p>Git has been re-purposed by the data science community. In addition to using it for source code, we use it to manage the motley collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code.</p>
 </section>
@@ -310,7 +321,7 @@ div.csl-indent {
 <section id="introduce-yourself-to-git" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="introduce-yourself-to-git"><span class="header-section-number">3.7</span> Introduce yourself to Git</h2>
 <p>Now we will configure git to talk with GitHub from RStudio.</p>
-<p>The <a href="https://usethis.r-lib.org/">usethis</a> <span class="citation" data-cites="usethis2022">(<a href="references.html#ref-usethis2022" role="doc-biblioref">Wickham, Bryan, and Barrett 2022</a>)</span> package offers an approach to set your Git user name and email from within R as well as setting up a personal access token. Why does this matter? Because we want to be able to push changes to our remote repository (save what we work on locally, on GitHub).</p>
+<p>The <a href="https://usethis.r-lib.org/">usethis</a> package <span class="citation" data-cites="usethis2022">(<a href="references.html#ref-usethis2022" role="doc-biblioref">Wickham, Bryan, and Barrett 2022</a>)</span> offers an approach to set your Git user name and email from within R as well as setting up a personal access token. Why does this matter? Because we want to be able to push changes to our remote repository (save what we work on locally, on GitHub).</p>
 <p>To configure git:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## install if needed (do this exactly once):</span></span>
