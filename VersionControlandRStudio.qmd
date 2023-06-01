@@ -18,9 +18,29 @@ knitr::include_graphics("images/github-Rstudio.jpg")
 
 ## Why Git?
 
-[Git](https://git-scm.com/) is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files -- called a repository -- in a sane, highly structured way. If you have no idea what I'm talking about, think of it as the "Track Changes" features from Microsoft Word on a raw vegan diet taking wheat grass and pomegranate shots 3 times a day.
+[Git](https://git-scm.com/) is a version control system. Its original purpose was to help groups of software developers work collaboratively on big software projects. Git manages the evolution of a set of files -- called a repository -- in a sane, highly structured way. If you have no idea what I'm talking about, think of it as the "Track Changes" features from Microsoft Word but supercharged.
 
-Git has been re-purposed by the data science community. In addition to using it for source code, we use it to manage the motley collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code.
+Version control systems start with a base version of a document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.
+
+```{r echo=F}
+knitr::include_graphics("images/play-changes.png")
+```
+
+Once you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes on the base document, ultimately resulting in different versions of that document. For example, two users can make independent sets of changes on the same document.
+
+```{r echo=F}
+knitr::include_graphics("images/versions.png")
+```
+
+Unless multiple users make changes to the same section of the document - whats known as a conflict - you can incorporate two sets of changes into the same base document.
+
+```{r echo=F}
+knitr::include_graphics("images/merge.png")
+```
+
+A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.
+
+Because of its usefulness git has been re-purposed by the data science community. In addition to using it for source code, we use it to manage the motley collection of files that make up typical data analysis projects, which often consist of data, figures, reports, and, yes, source code.[@software_carpentry]
 
 ## What's GitHub?
 
