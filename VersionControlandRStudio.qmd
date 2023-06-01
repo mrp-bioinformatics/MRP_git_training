@@ -78,7 +78,7 @@ Click big green button "Create repository."
 
 Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button.
 
-## Connecting Rstudio Cloud to GitHub
+## Connecting Rstudio Cloud to GitHub {.unnumbered}
 
 Here we verify that RStudio can issue Git commands on your behalf. This means you'll be able to pull from and push to GitHub from RStudio.
 
@@ -167,6 +167,8 @@ Both of these functions reveal whether a GitHub PAT is discovered and provide in
 This step is something you do once. Or, rather, once per machine, per PAT. From this point on, `usethis` and its dependencies should be able to automatically retrieve and use this PAT.
 
 ## Making some changes, save, commit.
+
+You can work with git and GitHub via the command line or a GUI (were using Posit Cloud). The routine use of git involves just a few commands: principally add, commit, and push, but also status and diff. We will use these commands integrated into RStudio as a set of buttons and check boxes and dialog boxes.
 
 From RStudio, modify the `README.md` file, e.g., by adding the line "This is a line from RStudio". Save your changes.
 
